@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #8B4513; /* Chocolate Brown */
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            color: #8B4513;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #8B4513;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #A0522D; /* Slightly darker brown on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form name="loginForm" action="login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+        <p>Don't have an account? <a href="./signup.html">Create one</a></p>
+        <p>Forgot your password? <a href="./forgot.html">Reset it</a></p>
+       
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const loginForm = document.getElementById('loginForm');
+        
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            
+            window.location.href = 'index.html';
+        });
+    });
+    </script>
+</body>
+</html>
